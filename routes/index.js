@@ -10,3 +10,4 @@ router.get('/', index.index );
 
 module.exports = router;
 
+//DEBUG=myapp:* npm start
