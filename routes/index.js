@@ -3,10 +3,10 @@ var router = express.Router();
 
 /*modular instance of home or index*/
 
-let index = require('../controllers/index.js');
+let landing = require('../controllers/landing.js');
 
 /* GET home page. */
-router.get('/', index.index );
+router.get('/', landing.get_landing );
 
 module.exports = router;
 
