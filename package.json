@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "if [[$NODE_ENV == 'production' ]]; then node ./bin/www; else nodemon ./bin/www; fi" ,
+    "start": "if [[$NODE_ENV == 'production' ]]; then node ./bin/www; else nodemon ./bin/www; fi",
     "previous": "node ./bin/www",
     "start-dev": "nodemon ./app.js"
   },
@@ -13,7 +13,9 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
-    "pug": "2.0.0-beta11"
+    "pg": "^8.5.1",
+    "pug": "2.0.0-beta11",
+    "sequelize": "^6.5.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
