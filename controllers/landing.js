@@ -9,13 +9,11 @@ exports.get_landing = function(req, res, next) {
   }
 
   exports.submit_lead = function(req, res, next) {
-    //console.log("lead_email:", req.body.lead_email);
-    return models.lead.create({
+
+    return models.Lead.create({
       email: req.body.lead_email
-    }).then(lead=>{
+    }).then(lead => {
       res.redirect('/');
     })
-
-    
   }
   
