@@ -11,6 +11,8 @@ let landing = require('../controllers/landing.js');
 router.get('/', landing.get_landing );
 /* Post form*/
 router.post('/', landing.submit_lead);
+//GET show leads route
+router.get('/leads', landing.show_leads)
 module.exports = router;
 
 //DEBUG=myapp:* npm start
