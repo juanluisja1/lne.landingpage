@@ -12,7 +12,9 @@ router.get('/', landing.get_landing );
 /* Post form*/
 router.post('/', landing.submit_lead);
 //GET show leads route
-router.get('/leads', landing.show_leads)
+router.get('/leads', landing.show_leads);
+//Get lead it
+router.get('/lead/:lead_id', landing.show_lead);
 module.exports = router;
 
 //DEBUG=myapp:* npm start
