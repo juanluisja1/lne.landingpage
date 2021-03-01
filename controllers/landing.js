@@ -35,4 +35,31 @@ exports.submit_lead = function(req, res, next) {
       res.render('lead', { lead: lead });
     })
   }
+
+  //get a form with the functionality to edit lead:id handler
+  exports.show_edit_lead = function(req, res, next) {
+    models.Lead.findOne({
+      where: {
+        id : req.params.lead_id
+      }
+    }).then(lead => {
+      res.render('lead/edit_lead', { lead: lead });
+    })
+  } 
+
+  // edit lead:id handler
+  exports.edit_lead = function(req, res, next) {
+    //req.params.lead_id
+    //req.body.lead_email
+
+    return models.Lead.update({
+      email: req.body.lead_email
+    }, {
+        where: {
+          id:req.params.lead_id
+        }
+       }).then(result => {
+         res.redirect('/lead/'+ req.params.lead_id);
+       })
+  } 
   
