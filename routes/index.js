@@ -17,7 +17,11 @@ router.get('/leads', landing.show_leads);
 router.get('/lead/:lead_id', landing.show_lead);
 //get lead to edit
 router.get('/lead/:lead_id/edit',landing.show_edit_lead);
-//porst lead edited
+//post lead edited
 router.post('/lead/:lead_id/edit',landing.edit_lead);
+//post delete lead:id
+router.post('/lead/:lead_id/delete',landing.delete_lead);
+
 module.exports = router;
+
 //DEBUG=myapp:* npm start
